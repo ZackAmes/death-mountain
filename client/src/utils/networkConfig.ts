@@ -186,6 +186,8 @@ export const NETWORKS = {
 };
 
 export function getNetworkConfig(networkKey: ChainId): NetworkConfig {
+  console.log("networkKey", networkKey as keyof typeof NETWORKS);
+  console.log("NETWORKS", NETWORKS);
   const network = NETWORKS[networkKey as keyof typeof NETWORKS];
   if (!network) throw new Error(`Network ${networkKey} not found`);
 

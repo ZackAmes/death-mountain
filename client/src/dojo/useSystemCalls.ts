@@ -68,6 +68,8 @@ export const useSystemCalls = () => {
         await waitForGlobalState();
       }
 
+      console.log(account)
+
       let tx = await account!.execute(calls);
       let receipt: any = await waitForPreConfirmedTransaction(tx.transaction_hash, 0);
 
