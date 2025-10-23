@@ -140,6 +140,7 @@ export const GameDirector = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     if (gameId && metadata && !gameSettings) {
       getSettingsDetails(metadata.settings_id).then((settings) => {
+        console.log('settings', settings);
         setGameSettings(settings);
         setVRFEnabled(currentNetworkConfig.vrf && settings.game_seed === 0);
         initializeGame(settings, currentNetworkConfig.name);

@@ -112,7 +112,7 @@ export const NETWORKS = {
     chainId: ChainId.SN_SEPOLIA,
     name: "Beast Mode",
     status: "online",
-    namespace: "ls_0_0_6",
+    namespace: "ls_0_0_9",
     slot: "pg-sepolia",
     rpcUrl: "https://api.cartridge.gg/x/starknet/sepolia/rpc/v0_9",
     torii: "https://api.cartridge.gg/x/pg-sepolia/torii",
@@ -122,7 +122,7 @@ export const NETWORKS = {
     manifest: manifest_sepolia,
     vrf: true,
     denshokan:
-      "0x0610aba32da98547f9f65fe0195cc60c08f1ef6fa2f2a0fc03e35f1c29319fd3",
+      "0x02334dc9c950c74c3228e2a343d495ae36f0b4edf06767a679569e9f9de08776",
     dungeon:
       "0x03b72a0ac53ca6ca07c0c0914157b731d795c6ce2302766ec87ade6435d20fda",
     dungeonTicket:

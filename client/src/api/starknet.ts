@@ -335,6 +335,8 @@ export const useStarknetApi = () => {
 
   const getSettingsDetails = async (settingsId: number) => {
     try {
+      console.log('getSettingsDetails', settingsId);
+      console.log('currentNetworkConfig', currentNetworkConfig);
       const response = await fetch(currentNetworkConfig.rpcUrl, {
         method: "POST",
         headers: {
@@ -356,6 +358,7 @@ export const useStarknetApi = () => {
       });
 
       const data = await response.json();
+      console.log('data', data);
       if (!data?.result) return null;
 
       let settings: any = {
@@ -370,6 +373,8 @@ export const useStarknetApi = () => {
         base_damage_reduction: parseInt(data.result[67]),
         market_size: parseInt(data.result[68]),
       }
+
+      console.log('settings', settings);
 
       return settings;
     } catch (error) {
