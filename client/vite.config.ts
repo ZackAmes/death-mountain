@@ -13,10 +13,21 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
-
+    optimizeDeps: {
+        exclude: ['@dojoengine/core', '@dojoengine/sdk', '@dojoengine/utils'],
+        esbuildOptions: {
+            target: 'esnext',
+        },
+    },
+    build: {
+        target: 'esnext',
+        commonjsOptions: {
+            transformMixedEsModules: true,
+        },
+    },
     server: {
         host: '0.0.0.0',
-        port: 3000,
+        port: 5173,
         allowedHosts: [process.env['DEPLOY_NAME'] + '.ponzis.fun'],
 
     },
